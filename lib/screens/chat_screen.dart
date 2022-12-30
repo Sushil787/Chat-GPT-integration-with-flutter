@@ -29,44 +29,32 @@ class _ChatScreenState extends State<ChatScreen> {
                   child: ListView.builder(
                     itemCount: value.getAnswerQuestionList.length,
                     itemBuilder: (context, index) {
-                      if (value.getAnswerQuestionList.isEmpty) {
-                        return SizedBox(
-                          height: height * 0.3,
-                          child: const Card(
-                              child: Text(
-                            "How can i help you",
-                            style: TextStyle(color: Colors.white),
-                          )),
-                        );
-                      } else {
-                        return Card(
-                          elevation: 8,
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 20, horizontal: 10),
-                            child: Column(
-                              children: [
-                                Text(
-                                  value.getAnswerQuestionList.entries
-                                      .elementAt(index)
-                                      .key
-                                      .toString(),
-                                  textAlign: TextAlign.justify,
-                                  style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      color:
-                                          Color.fromARGB(255, 199, 195, 195)),
-                                ),
-                                Text(value.getAnswerQuestionList.entries
+                      return Card(
+                        elevation: 8,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 20, horizontal: 10),
+                          child: Column(
+                            children: [
+                              Text(
+                                value.getAnswerQuestionList.entries
                                     .elementAt(index)
-                                    .value
-                                    .toString())
-                              ],
-                            ),
+                                    .key
+                                    .toString(),
+                                textAlign: TextAlign.justify,
+                                style: const TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color.fromARGB(255, 199, 195, 195)),
+                              ),
+                              Text(value.getAnswerQuestionList.entries
+                                  .elementAt(index)
+                                  .value
+                                  .toString())
+                            ],
                           ),
-                        );
-                      }
+                        ),
+                      );
                     },
                   ),
                 ),
