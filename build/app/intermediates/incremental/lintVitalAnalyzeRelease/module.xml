@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="/home/adverttise/tutos/app_gpt/android/app"
+    name=":app"
+    type="APP"
+    maven="android:app:"
+    gradle="7.1.2"
+    buildFolder="/home/adverttise/tutos/app_gpt/build/app"
+    bootClassPath="/home/adverttise/Android/Sdk/platforms/android-31/android.jar:/home/adverttise/Android/Sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-31">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>
